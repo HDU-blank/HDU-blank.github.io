@@ -70,6 +70,10 @@
     			
             
     			
+    			<a q-on="click: openSlider(e, 'archives')" href="javascript:void(0)">归档</a>
+    			
+            
+    			
     			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
@@ -399,21 +403,29 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
+      
+      
+      
+    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 25%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 25%" q-on="click: openSlider(e, 'archives')"><a href="javascript:void(0)" q-class="active:archives">归档</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 25%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 25%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -432,27 +444,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">节流</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">防抖</a>
-              </li>
-             
+            
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
-             
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">节流</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">防抖</a>
+              </li>
+            
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
-             
+            
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
@@ -501,24 +513,12 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
+    	<section class="tools-section " q-show="archives">
   		
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://www.google.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>google</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://caniuse.com/#/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Can I use</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://www.easy-mock.com/login/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Easy Mock</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>JavaScript | MDN</a>
+              <a href="/archives/2019/" target="_self" class="search-title">2019年^0^</a>
             </li>
           
         </ul>
@@ -527,15 +527,42 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
+    <section class="tools-section tools-section-friends" q-show="friends">
+      
+      <ul class="search-ul">
+        
+        <li class="search-li">
+          <a href="http://www.google.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>google</a>
+        </li>
+        
+        <li class="search-li">
+          <a href="https://caniuse.com/#/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Can I use</a>
+        </li>
+        
+        <li class="search-li">
+          <a href="https://www.easy-mock.com/login/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Easy Mock</a>
+        </li>
+        
+        <li class="search-li">
+          <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>JavaScript | MDN</a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    
+
+    
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">毕业于杭电&lt;br&gt;目前就职于百世&lt;br&gt;保持学习，不定时更新</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">毕业于杭电&lt;br&gt;&lt;br&gt;目前就职于百世&lt;br&gt;&lt;br&gt;天干物燥，star皆空</div>
   	  	
     	</section>
     
   </div>
-  
+
 </div>
+
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
