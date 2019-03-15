@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | McG61的随笔</title>
+  <title>JS常用正则校验 | McG61的随笔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="McG61的随笔">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1. 手机号正则校验Match all1^(?:\+?86)?1(?:3\d&amp;#123;3&amp;#125;|5[^4\D]\d&amp;#123;2&amp;#125;|8\d&amp;#123;3&amp;#125;|7[^0129\D](?(?&amp;lt;=4)(?:0\d|1[0-2]|9\d)|\d&amp;#123;2&amp;#125;)|9[189]\d&amp;#123;2&amp;#125;|66\d&amp;#123;2&amp;#125;)\d&amp;#123;6&amp;#">
+<meta name="keywords" content="js,正则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS常用正则校验">
+<meta property="og:url" content="http://yoursite.com/2019/03/15/JS常用正则校验/index.html">
 <meta property="og:site_name" content="McG61的随笔">
+<meta property="og:description" content="1. 手机号正则校验Match all1^(?:\+?86)?1(?:3\d&amp;#123;3&amp;#125;|5[^4\D]\d&amp;#123;2&amp;#125;|8\d&amp;#123;3&amp;#125;|7[^0129\D](?(?&amp;lt;=4)(?:0\d|1[0-2]|9\d)|\d&amp;#123;2&amp;#125;)|9[189]\d&amp;#123;2&amp;#125;|66\d&amp;#123;2&amp;#125;)\d&amp;#123;6&amp;#">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-15T15:19:31.451Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="McG61的随笔">
+<meta name="twitter:title" content="JS常用正则校验">
+<meta name="twitter:description" content="1. 手机号正则校验Match all1^(?:\+?86)?1(?:3\d&amp;#123;3&amp;#125;|5[^4\D]\d&amp;#123;2&amp;#125;|8\d&amp;#123;3&amp;#125;|7[^0129\D](?(?&amp;lt;=4)(?:0\d|1[0-2]|9\d)|\d&amp;#123;2&amp;#125;)|9[189]\d&amp;#123;2&amp;#125;|66\d&amp;#123;2&amp;#125;)\d&amp;#123;6&amp;#">
   
     <link rel="alternative" href="/atom.xml" title="McG61的随笔" type="application/atom+xml">
   
@@ -158,36 +163,77 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JS常用正则校验" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/15/JS常用正则校验/" class="archive-article-date">
-  	<time datetime="2019-03-15T15:08:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/15/JS常用正则校验/">JS常用正则校验</a>
+    <h1 class="article-title" itemprop="name">
+      JS常用正则校验
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/03/15/JS常用正则校验/" class="archive-article-date">
+  	<time datetime="2019-03-15T15:08:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-手机号正则校验"><a href="#1-手机号正则校验" class="headerlink" title="1. 手机号正则校验"></a>1. 手机号正则校验</h3><p>Match all<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(?:\+?86)?1(?:3\d&#123;3&#125;|5[^4\D]\d&#123;2&#125;|8\d&#123;3&#125;|7[^0129\D](?(?&lt;=4)(?:0\d|1[0-2]|9\d)|\d&#123;2&#125;)|9[189]\d&#123;2&#125;|66\d&#123;2&#125;)\d&#123;6&#125;$</span><br></pre></td></tr></table></figure></p>
+<p>Match China Mobile(移动)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(?:\+?86)?1(?:3[^0-3\D](?(?&lt;=4)[^9\D]|\d)|5[^3-6\D]\d|8[23478]\d|(?:78|98)\d)\d&#123;7&#125;$</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>Match China Unicom(联通)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(?:\+?86)?1(?:3[0-2]|[578][56]|66)\d&#123;8&#125;$</span><br></pre></td></tr></table></figure></p>
+<p>Match China Telecom(电信)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(?:\+?86)?1(?:3[34](?(?&lt;=4)(?:9)|\d)\d|53\d&#123;2&#125;|8[019]\d&#123;2&#125;|7[347](?(?&lt;=4)(?:0[0-5])|\d&#123;2&#125;)|9[19]\d&#123;2&#125;)\d&#123;6&#125;$</span><br></pre></td></tr></table></figure></p>
+<p>Match Inmarsat (Satellite Communications)(卫星通信)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(?:\+?86)?1749\d&#123;7&#125;$</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-身份证号码正则校验"><a href="#2-身份证号码正则校验" class="headerlink" title="2. 身份证号码正则校验"></a>2. 身份证号码正则校验</h3><p>根据〖中华人民共和国国家标准 GB 11643-1999〗中有关公民身份号码的规定，公民身份号码是特征组合码，由十七位数字本体码和一位数字校验码组成。<br>排列顺序从左至右依次为：六位数字地址码，八位数字出生日期码，三位数字顺序码和一位数字校验码。</p>
+<ul>
+<li><strong>地址码</strong> 表示编码对象常住户口所在县(市、旗、区)的行政区划代码。</li>
+<li><strong>出生日期码</strong> 表示编码对象出生的年、月、日，其中年份用四位数字表示，年、月、日之间不用分隔符。</li>
+<li><strong>顺序码</strong> 表示同一地址码所标识的区域范围内，对同年、月、日出生的人员编定的顺序号。顺序码的奇数分给男性，偶数分给女性。</li>
+<li><strong>校验码</strong> 是根据前面十七位数字码，按照ISO 7064:1983.MOD 11-2校验码计算出来的检验码。</li>
+</ul>
+<p>出生日期计算方法。<br>    15位的身份证编码首先把出生年扩展为4位，简单的就是增加一个19或18,这样就包含了所有1800-1999年出生的人;<br>    2000年后出生的肯定都是18位的了没有这个烦恼，至于1800年前出生的,那啥那时应该还没身份证号这个东东，⊙﹏⊙b汗…<br>下面是正则表达式:<br> 出生日期1800-2099  (18|19|20)?\d{2}(0[1-9]|1[12])(0[1-9]|[12]\d|3[01])<br> 身份证正则表达式    /^\d{6}(18|19|20)?\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i<br> 15位校验规则 6位地址编码+6位出生日期+3位顺序号<br> 18位校验规则 6位地址编码+8位出生日期+3位顺序号+1位校验位</p>
+<p> 校验位规则      公式:∑(ai×Wi)(mod 11)……………………………………(1)<br>                公式(1)中：<br>                i—-表示号码字符从由至左包括校验码在内的位置序号；<br>                ai—-表示第i位置上的号码字符值；<br>                Wi—-示第i位置上的加权因子，其数值依据公式Wi=2^(n-1）(mod 11)计算得出。<br>                i 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1<br>                Wi 7 9 10 5 8 4 2 1 6 3 7 9 10 5 8 4 2 1</p>
+<p><strong><br>身份证号合法性验证<br>支持15位和18位身份证号<br>支持地址编码、出生日期、校验位验证
+</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">function IdentityCodeValid(code) &#123;</span><br><span class="line">    let province=&#123;</span><br><span class="line">		11:&quot;北京&quot;,12:&quot;天津&quot;,13:&quot;河北&quot;,14:&quot;山西&quot;,15:&quot;内蒙古&quot;,</span><br><span class="line">		21:&quot;辽宁&quot;,22:&quot;吉林&quot;,23:&quot;黑龙江 &quot;,</span><br><span class="line">		31:&quot;上海&quot;,32:&quot;江苏&quot;,33:&quot;浙江&quot;,34:&quot;安徽&quot;,35:&quot;福建&quot;,36:&quot;江西&quot;,37:&quot;山东&quot;,</span><br><span class="line">		41:&quot;河南&quot;,42:&quot;湖北 &quot;,43:&quot;湖南&quot;,44:&quot;广东&quot;,45:&quot;广西&quot;,46:&quot;海南&quot;,</span><br><span class="line">		50:&quot;重庆&quot;,51:&quot;四川&quot;,52:&quot;贵州&quot;,53:&quot;云南&quot;,54:&quot;西藏 &quot;,61:&quot;陕西&quot;,</span><br><span class="line">		62:&quot;甘肃&quot;,63:&quot;青海&quot;,64:&quot;宁夏&quot;,65:&quot;新疆&quot;,</span><br><span class="line">		71:&quot;台湾&quot;,81:&quot;香港&quot;,82:&quot;澳门&quot;,91:&quot;国外 &quot;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">    let tip = &quot;&quot;;</span><br><span class="line">    let pass= true;</span><br><span class="line"></span><br><span class="line">    if(!code || !/^\d&#123;6&#125;(18|19|20)?\d&#123;2&#125;(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d&#123;3&#125;(\d|X)$/i.test(code))&#123;</span><br><span class="line">        tip = &quot;身份证号格式错误&quot;;</span><br><span class="line">        pass = false;</span><br><span class="line">    &#125; else if(!province[code.substr(0,2)])&#123;</span><br><span class="line">        tip = &quot;地址编码错误&quot;;</span><br><span class="line">        pass = false;</span><br><span class="line">    &#125; else&#123;</span><br><span class="line">        //18位身份证需要验证最后一位校验位</span><br><span class="line">        if(code.length == 18)&#123;</span><br><span class="line">            code = code.split(&apos;&apos;);</span><br><span class="line">        	//∑(ai×Wi)(mod 11)</span><br><span class="line">        	//加权因子</span><br><span class="line">        	let factor = [ 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2 ];</span><br><span class="line">        	//校验位</span><br><span class="line">        	let parity = [ 1, 0, &apos;X&apos;, 9, 8, 7, 6, 5, 4, 3, 2 ];</span><br><span class="line">        	let sum = 0;</span><br><span class="line">        	let ai = 0;</span><br><span class="line">        	let wi = 0;</span><br><span class="line">        	for (let i = 0; i &lt; 17; i++) &#123;</span><br><span class="line">                ai = code[i];</span><br><span class="line">                wi = factor[i];</span><br><span class="line">                sum += ai * wi;</span><br><span class="line">        	&#125;</span><br><span class="line">        	let last = parity[sum % 11];</span><br><span class="line">         	if(parity[sum % 11] != code[17])&#123;</span><br><span class="line">             	tip = &quot;校验位错误&quot;;</span><br><span class="line">             	pass = false;</span><br><span class="line">         	&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(!pass) console.log(tip);</span><br><span class="line">    return pass;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>这彩蛋彩蛋，扫码有惊喜<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -203,182 +249,54 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/15/JS常用方法/" class="archive-article-date">
-  	<time datetime="2019-03-15T11:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/15/JS常用方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS常用方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/15/JS常用方法/">JS常用方法</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/14/CSS常用小技巧/" class="archive-article-date">
-  	<time datetime="2019-03-14T11:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/14/CSS常用小技巧/">CSS常用小技巧</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/14/年度计划/" class="archive-article-date">
-  	<time datetime="2019-03-14T05:17:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/14/年度计划/">年度计划</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计划</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/14/函数节流和函数防抖/" class="archive-article-date">
-  	<time datetime="2019-03-14T04:57:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/14/函数节流和函数防抖/">函数节流和函数防抖</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">节流</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">防抖</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -403,8 +321,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
