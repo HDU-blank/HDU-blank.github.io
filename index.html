@@ -160,6 +160,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-npm、nvm和nrm使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/18/npm、nvm和nrm使用/">npm、nvm和nrm使用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/18/npm、nvm和nrm使用/" class="archive-article-date">
+  	<time datetime="2019-03-18T04:56:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-npm-–-node-package-manage"><a href="#1-npm-–-node-package-manage" class="headerlink" title="1. npm – node package manage"></a>1. npm – node package manage</h3><blockquote>
+<p>npm是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题</p>
+</blockquote>
+<p><strong>Node.js安装</strong><br>从<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js官网</a>下载对应平台的安装程序<br>在Windows上安装时务必选择全部组件，包括勾选<code>Add to Path</code>。<br>安装完成后，在Windows环境下，请打开命令提示符，然后输入<code>node -v</code>，如果安装正常，可以类似的输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users&gt;node -v</span><br><span class="line">v8.11.1</span><br></pre></td></tr></table></figure>
+<p>此时npm已经在Node.js安装的时候顺带装好了。我们在命令提示符或者终端输入<code>npm -v</code>，应该看到类似的输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users&gt;node -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure></p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">npm</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nvm</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nrm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/18/npm、nvm和nrm使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JS常用正则校验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -471,94 +558,6 @@
 
 
   
-    <article id="post-函数节流和函数防抖" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/14/函数节流和函数防抖/">函数节流和函数防抖</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/14/函数节流和函数防抖/" class="archive-article-date">
-  	<time datetime="2019-03-14T04:57:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="JavaScript函数节流和函数防抖之间的区别"><a href="#JavaScript函数节流和函数防抖之间的区别" class="headerlink" title="JavaScript函数节流和函数防抖之间的区别"></a>JavaScript函数节流和函数防抖之间的区别</h4><p>函数节流和函数防抖，两者都是优化高频率执行js代码的一种手段。</p>
-<ul>
-<li><strong>函数节流是指一定时间内js方法只执行一次</strong>。比如公交车，就是一定时间内发车一次。</li>
-<li><strong>函数防抖是指频繁触发的情况下，只有足够的延迟时间，才执行代码一次</strong>。比如感应门禁，就是在一定时间内，如果有人陆续进门，门就不会关。只有一定间隔没人进门触发感应，门才会关。<h5 id="应用场景区别"><a href="#应用场景区别" class="headerlink" title="应用场景区别"></a>应用场景区别</h5></li>
-<li><strong>函数节流</strong> 多数在监听页面元素滚动事件的时候会用到，不要求一定要执行最新一次js方法</li>
-<li><strong>函数防抖</strong> 最常见的就是用户注册时候的手机号码验证和邮箱验证了。只有等用户输入完毕后，前端才需要检查格式是否正确，如果不正确，再弹出提示语。（需要执行最新一次的js方法）</li>
-<li><strong>总结</strong>：<strong>节流</strong>相当于把触发之后的js方法都return，而<strong>防抖</strong>相当于把触发之前的js方法都销毁。
-        
-      
-
-      
-    </li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">节流</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">防抖</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/14/函数节流和函数防抖/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -666,11 +665,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -682,15 +693,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+                <a href="javascript:void(0)" class="js-tag color4">nvm</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">nrm</a>
               </li>
             
             <div class="clearfix"></div>

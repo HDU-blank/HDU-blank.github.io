@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/3 | McG61的随笔</title>
+  <title>npm、nvm和nrm使用 | McG61的随笔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="McG61的随笔">
-<meta property="og:url" content="http://yoursite.com/archives/2018/03/index.html">
+  <meta name="description" content="1. npm – node package manage npm是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题  Node.js安装从Node.js官网下载对应平台的安装程序在Windows上安装时务必选择全部组件，包括勾选Add to Path。安装完成后，在Windows环境下，请打开命令提示符，然后输入node -v，如果安装正常，可以类似的输出： 12C:\">
+<meta name="keywords" content="npm,nvm,nrm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm、nvm和nrm使用">
+<meta property="og:url" content="http://yoursite.com/2019/03/18/npm、nvm和nrm使用/index.html">
 <meta property="og:site_name" content="McG61的随笔">
+<meta property="og:description" content="1. npm – node package manage npm是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题  Node.js安装从Node.js官网下载对应平台的安装程序在Windows上安装时务必选择全部组件，包括勾选Add to Path。安装完成后，在Windows环境下，请打开命令提示符，然后输入node -v，如果安装正常，可以类似的输出： 12C:\">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-18T06:55:14.217Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="McG61的随笔">
+<meta name="twitter:title" content="npm、nvm和nrm使用">
+<meta name="twitter:description" content="1. npm – node package manage npm是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题  Node.js安装从Node.js官网下载对应平台的安装程序在Windows上安装时务必选择全部组件，包括勾选Add to Path。安装完成后，在Windows环境下，请打开命令提示符，然后输入node -v，如果安装正常，可以类似的输出： 12C:\">
   
     <link rel="alternative" href="/atom.xml" title="McG61的随笔" type="application/atom+xml">
   
@@ -158,64 +163,145 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-npm、nvm和nrm使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/06/基础排序算法的js实现/" class="archive-article-date">
-  	<time datetime="2018-03-06T03:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/06/基础排序算法的js实现/">八种基础排序算法的js实现</a>
+    <h1 class="article-title" itemprop="name">
+      npm、nvm和nrm使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/03/18/npm、nvm和nrm使用/" class="archive-article-date">
+  	<time datetime="2019-03-18T04:56:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-npm-–-node-package-manage"><a href="#1-npm-–-node-package-manage" class="headerlink" title="1. npm – node package manage"></a>1. npm – node package manage</h3><blockquote>
+<p>npm是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题</p>
+</blockquote>
+<p><strong>Node.js安装</strong><br>从<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js官网</a>下载对应平台的安装程序<br>在Windows上安装时务必选择全部组件，包括勾选<code>Add to Path</code>。<br>安装完成后，在Windows环境下，请打开命令提示符，然后输入<code>node -v</code>，如果安装正常，可以类似的输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users&gt;node -v</span><br><span class="line">v8.11.1</span><br></pre></td></tr></table></figure>
+<p>此时npm已经在Node.js安装的时候顺带装好了。我们在命令提示符或者终端输入<code>npm -v</code>，应该看到类似的输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users&gt;node -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="2-nvm"><a href="#2-nvm" class="headerlink" title="2. nvm"></a>2. nvm</h3><blockquote>
+<p>node版本管理器，可切换不同版本的node<br>安装方法参考网上</p>
+</blockquote>
+<p>nvm常用命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">nvm ls                  // 列出所有安装的版本</span><br><span class="line">nvm install             // 安装指定版本，可模糊安装</span><br><span class="line">nvm use                 // 切换使用指定的版本node</span><br><span class="line">nvm uninstall           // 删除已安装的指定版本，语法与install类似</span><br><span class="line">nvm ls-remote           // 列出所以远程服务器的版本（官方node version list）</span><br><span class="line">nvm current             // 显示当前的版本</span><br><span class="line">nvm alias               // 给不同的版本号添加别名</span><br><span class="line">nvm unalias             // 删除已定义的别名</span><br><span class="line">nvm reinstall-packages  // 在当前版本node环境下，重新全局安装指定版本号的npm包</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-nrm"><a href="#3-nrm" class="headerlink" title="3. nrm"></a>3. nrm</h3><blockquote>
+<p>npm下载地址的管理器，可随意切换</p>
+</blockquote>
+<p>全局安装 nrm：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install nrm -g</span><br></pre></td></tr></table></figure></p>
+<p>安装完后就可以立即使用了,用<code>nrm ls</code>命令查看npm源，带*号即为当前使用的源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> npm ---- https://registry.npmjs.org/</span><br><span class="line"> cnpm --- http://r.cnpmjs.org/</span><br><span class="line">*taobao-- https://registry.npm.taobao.org/</span><br><span class="line"> nj ----- https://registry.nodejitsu.com/</span><br><span class="line"> npmMirror https://skimdb.npmjs.com/registry/</span><br><span class="line"> edunpm - http://registry.enpmjs.or</span><br></pre></td></tr></table></figure></p>
+<p>nrm常用命令，其中<code>reigstry</code>为源名，<code>url</code>为源的路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nrm ls                          // 查看源列表</span><br><span class="line">nrm add &lt;registry&gt; &lt;url&gt;        // 增加源</span><br><span class="line">nrm use &lt;registry&gt;              // 切换源</span><br><span class="line">nrm del &lt;registry&gt;              // 删除源</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>这彩蛋彩蛋，扫码有惊喜<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">npm</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">排序</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nvm</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nrm</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/03/15/JS常用正则校验/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS常用正则校验</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -239,8 +325,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
