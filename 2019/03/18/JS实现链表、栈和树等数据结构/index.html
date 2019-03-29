@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>McG61的随笔</title>
+  <title>JS实现链表、栈和树等数据结构 | McG61的随笔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="McG61的随笔">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="1. JS构建顺序栈支持 push，pop，top，size，clear 操作，并能在常数时间内检索到最小元素的栈。  push(x) – 将元素 x 推入栈中。 pop() – 删除栈顶的元素。 top() – 获取栈顶元素。 size() – 获取栈深度（大小）。 clear() – 清空栈元素。 getMin() – 检索栈中的最小元素。">
+<meta name="keywords" content="js,数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS实现链表、栈和树等数据结构">
+<meta property="og:url" content="http://yoursite.com/2019/03/18/JS实现链表、栈和树等数据结构/index.html">
 <meta property="og:site_name" content="McG61的随笔">
+<meta property="og:description" content="1. JS构建顺序栈支持 push，pop，top，size，clear 操作，并能在常数时间内检索到最小元素的栈。  push(x) – 将元素 x 推入栈中。 pop() – 删除栈顶的元素。 top() – 获取栈顶元素。 size() – 获取栈深度（大小）。 clear() – 清空栈元素。 getMin() – 检索栈中的最小元素。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-29T01:53:19.243Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="McG61的随笔">
+<meta name="twitter:title" content="JS实现链表、栈和树等数据结构">
+<meta name="twitter:description" content="1. JS构建顺序栈支持 push，pop，top，size，clear 操作，并能在常数时间内检索到最小元素的栈。  push(x) – 将元素 x 推入栈中。 pop() – 删除栈顶的元素。 top() – 获取栈顶元素。 size() – 获取栈深度（大小）。 clear() – 清空栈元素。 getMin() – 检索栈中的最小元素。">
   
     <link rel="alternative" href="/atom.xml" title="McG61的随笔" type="application/atom+xml">
   
@@ -158,282 +163,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-JS常用方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-JS实现链表、栈和树等数据结构" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/15/JS常用方法/">JS常用方法</a>
+    <h1 class="article-title" itemprop="name">
+      JS实现链表、栈和树等数据结构
     </h1>
   
 
         
-        <a href="/2019/03/15/JS常用方法/" class="archive-article-date">
-  	<time datetime="2019-03-15T11:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-15</time>
+        <a href="/2019/03/18/JS实现链表、栈和树等数据结构/" class="archive-article-date">
+  	<time datetime="2019-03-18T14:37:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-计算js代码运行时间"><a href="#1-计算js代码运行时间" class="headerlink" title="1. 计算js代码运行时间"></a>1. 计算js代码运行时间</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let arr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];</span><br><span class="line">function shuffle(arr) &#123;</span><br><span class="line">    let n = arr.length;</span><br><span class="line">    while (len) &#123;</span><br><span class="line">        let j = Math.floor(Math.random() * n--);</span><br><span class="line">        [arr[j], arr[n]] = [arr[n], arr[j]];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.time(&quot;sort&quot;);		// 开始位置写上console.time，并且括号内传一个标识字符串</span><br><span class="line">shuffle(arr);</span><br><span class="line">console.timeEnd(&quot;sort&quot;);	// 结束的位置使用console.timeEnd方法，并再次把标识字符串传入</span><br></pre></td></tr></table></figure>
-<h3 id="2-JSON化响应结果"><a href="#2-JSON化响应结果" class="headerlink" title="2. JSON化响应结果"></a>2. JSON化响应结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function parseRes(res) &#123;</span><br><span class="line">    return typeof res === &apos;string&apos; ? JSON.parse(res) : res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-空判断"><a href="#3-空判断" class="headerlink" title="3. 空判断"></a>3. 空判断</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function isEmpty(data) &#123;</span><br><span class="line">    return data === null || data === undefined || typeof data === &apos;string&apos; &amp;&amp; data.trim() === &apos;&apos; || typeof data === &apos;object&apos; &amp;&amp; Object.keys(data).length &lt; 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/15/JS常用方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-CSS常用小技巧" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/14/CSS常用小技巧/">CSS常用小技巧</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/14/CSS常用小技巧/" class="archive-article-date">
-  	<time datetime="2019-03-14T11:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-溢出文字…展示"><a href="#1-溢出文字…展示" class="headerlink" title="1. 溢出文字…展示"></a>1. 溢出文字…展示</h3><p>text-overflow用来标记溢出内容如何显示，并不能强制文字溢出，要想让此属性生效，必须设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    overflow:hidde;</span><br><span class="line">    white-space:nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>并且元素必须是块状元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    display:block; //inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/14/CSS常用小技巧/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-年度计划" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/14/年度计划/">年度计划</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/14/年度计划/" class="archive-article-date">
-  	<time datetime="2019-03-14T05:17:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="2019年计划"><a href="#2019年计划" class="headerlink" title="2019年计划"></a>2019年计划</h3><ul>
-<li style="list-style: none"><input type="checkbox"> 搭建博客并坚持每周输出内容</li>
-<li style="list-style: none"><input type="checkbox"> 刷完LeetCode探索 初级算法</li>
-<li style="list-style: none"><input type="checkbox"> 刷完LeetCode探索 中级算法</li>
-<li style="list-style: none"><input type="checkbox"> react源码学习</li>
-<li style="list-style: none"><input type="checkbox"> 股票盈利1w – 作为个人旅行基金（努力实现中ing）</li>
-<li style="list-style: none"><input type="checkbox"> 一次旅行</li>
-<li style="list-style: none"><input type="checkbox"> 锻炼健身</li>
-<li style="list-style: none"><input type="checkbox"> 提升英语水平，达到可以与人交流水平</li>
-</ul>
-<blockquote>
-<p>一眨眼2019年已经过了1/4，回想一季度觉得非常有必要再细化每个月的目标。每个月末总结当月目标完成度，并规划下月目标。</p>
-</blockquote>
-<h4 id="2019年4月目标"><a href="#2019年4月目标" class="headerlink" title="2019年4月目标"></a>2019年4月目标</h4><ul>
-<li style="list-style: none"><input type="checkbox"> 刷完LeetCode探索 初级算法</li>
-<li style="list-style: none"><input type="checkbox"> 看完一本书 《JavaScript设计模式》</li>
-<li style="list-style: none"><input type="checkbox"> 学习英语。<a href="https://byoungd.gitbook.io/" target="_blank" rel="noopener">GitBook 链接</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计划</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/14/年度计划/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-函数节流和函数防抖" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/14/函数节流和函数防抖/">函数节流和函数防抖</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/14/函数节流和函数防抖/" class="archive-article-date">
-  	<time datetime="2019-03-14T04:57:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="JavaScript函数节流和函数防抖之间的区别"><a href="#JavaScript函数节流和函数防抖之间的区别" class="headerlink" title="JavaScript函数节流和函数防抖之间的区别"></a>JavaScript函数节流和函数防抖之间的区别</h4><p>函数节流和函数防抖，两者都是优化高频率执行js代码的一种手段。</p>
+        <h3 id="1-JS构建顺序栈"><a href="#1-JS构建顺序栈" class="headerlink" title="1. JS构建顺序栈"></a>1. JS构建顺序栈</h3><p>支持 push，pop，top，size，clear 操作，并能在常数时间内检索到最小元素的栈。</p>
 <ul>
-<li><strong>函数节流是指一定时间内js方法只执行一次</strong>。比如公交车，就是一定时间内发车一次。</li>
-<li><strong>函数防抖是指频繁触发的情况下，只有足够的延迟时间，才执行代码一次</strong>。比如感应门禁，就是在一定时间内，如果有人陆续进门，门就不会关。只有一定间隔没人进门触发感应，门才会关。<h5 id="应用场景区别"><a href="#应用场景区别" class="headerlink" title="应用场景区别"></a>应用场景区别</h5></li>
-<li><strong>函数节流</strong> 多数在监听页面元素滚动事件的时候会用到，不要求一定要执行最新一次js方法</li>
-<li><strong>函数防抖</strong> 最常见的就是用户注册时候的手机号码验证和邮箱验证了。只有等用户输入完毕后，前端才需要检查格式是否正确，如果不正确，再弹出提示语。（需要执行最新一次的js方法）</li>
-<li><strong>总结</strong>：<strong>节流</strong>相当于把触发之后的js方法都return，而<strong>防抖</strong>相当于把触发之前的js方法都销毁。
-        
+<li>push(x) – 将元素 x 推入栈中。</li>
+<li>pop() – 删除栈顶的元素。</li>
+<li>top() – 获取栈顶元素。</li>
+<li>size() – 获取栈深度（大小）。</li>
+<li>clear() – 清空栈元素。</li>
+<li>getMin() – 检索栈中的最小元素。</li>
+</ul>
+<a id="more"></a>
+<h4 id="JS代码实现"><a href="#JS代码实现" class="headerlink" title="JS代码实现"></a>JS代码实现</h4>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * initialize your data structure here.</span><br><span class="line"> */</span><br><span class="line">var MinStack = function() &#123;</span><br><span class="line">    this.array = [];</span><br><span class="line">    this.minArray = [];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @param &#123;number&#125; x</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.push = function(x) &#123;</span><br><span class="line">    this.array.push(x);</span><br><span class="line">    if (this.minArray.length === 0 || x &lt;= this.minArray[this.minArray.length-1]) &#123;</span><br><span class="line">        this.minArray.push(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.pop = function() &#123;</span><br><span class="line">    let item = this.array.pop();</span><br><span class="line">    if (item === this.minArray[this.minArray.length-1]) &#123;</span><br><span class="line">        this.minArray.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    return item;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.top = function() &#123;</span><br><span class="line">    return this.array[this.array.length - 1];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.size = function() &#123;</span><br><span class="line">    return this.array.length;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.clear = function() &#123;</span><br><span class="line">    this.array = [];</span><br><span class="line">    this.minArray = [];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.getMin = function() &#123;</span><br><span class="line">    return this.minArray[this.minArray.length-1];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Your MinStack object will be instantiated and called as such:</span><br><span class="line"> * var obj = new MinStack();</span><br><span class="line"> * obj.push(x);</span><br><span class="line"> * obj.pop();</span><br><span class="line"> * var param_3 = obj.top();</span><br><span class="line"> * var param_4 = obj.getMin();</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+<h3 id="2-JS链表"><a href="#2-JS链表" class="headerlink" title="2. JS链表"></a>2. JS链表</h3><p>  ​</p>
+<p>  ​</p>
+
       
 
       
-    </li></ul></div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>这彩蛋彩蛋，扫码有惊喜<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
     <div class="article-info article-info-index">
       
       
@@ -446,11 +239,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">节流</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">防抖</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		
 		</ul>
@@ -459,16 +248,33 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/14/函数节流和函数防抖/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/03/19/算法题汇总/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          算法汇总
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/18/npm、nvm和nrm使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">npm、nvm和nrm使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -488,90 +294,14 @@
 
 
 
-
-  
-    <article id="post-基础排序算法的js实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/06/基础排序算法的js实现/">八种基础排序算法的js实现</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/06/基础排序算法的js实现/" class="archive-article-date">
-  	<time datetime="2018-03-06T03:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、快速排序"><a href="#1、快速排序" class="headerlink" title="1、快速排序"></a>1、快速排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">function quickSort(arr)&#123;</span><br><span class="line">  //如果数组&lt;=1,则直接返回</span><br><span class="line">  if(arr.length&lt;=1)&#123;</span><br><span class="line">    return arr;</span><br><span class="line">  &#125;</span><br><span class="line">  var pivotIndex=Math.floor(arr.length/2);</span><br><span class="line">  //找基准，并把基准从原数组删除</span><br><span class="line">  var pivotkey=arr.splice(pivotIndex,1)[0];</span><br><span class="line">  //定义左右数组</span><br><span class="line">  var left=[];</span><br><span class="line">  var right=[];</span><br><span class="line">  //比基准小的放在left，比基准大的放在right</span><br><span class="line">  for(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">      if(arr[i]&lt;=pivotkey)&#123;</span><br><span class="line">          left.push(arr[i]);</span><br><span class="line">      &#125;</span><br><span class="line">      else&#123;</span><br><span class="line">          right.push(arr[i]);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  //递归</span><br><span class="line">  return quickSort(left).concat([pivotkey],quickSort(right));</span><br><span class="line">&#125;</span><br><span class="line">var elements=[55,45,62,8,12,7,4,65,3,98];</span><br><span class="line">quickSort(elements);</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">排序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/06/基础排序算法的js实现/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -595,8 +325,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
