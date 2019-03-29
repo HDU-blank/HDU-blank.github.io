@@ -1,10 +1,10 @@
 ---
-title: JS实现顺序栈
+title: JS实现链表、栈和树等数据结构
 date: 2019-03-18 22:37:39
-tags: [js, 栈]
+tags: [js, 数据结构]
 ---
 
-### JS构建顺序栈
+### 1. JS构建顺序栈
 
 支持 push，pop，top，size，clear 操作，并能在常数时间内检索到最小元素的栈。
 
@@ -87,6 +87,8 @@ tags: [js, 栈]
    * var param_4 = obj.getMin();
    */
   ```
+
+### 2. JS链表
 
   ​
 

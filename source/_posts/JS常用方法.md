@@ -137,3 +137,26 @@ function trim(str, charlist) {
     return whitespace.indexOf(str.charAt(0)) === -1 ? str : '';
 }
 ```
+### 7. js 判断当前页面是否被浏览
+js可以通过document.hidden属性判断当前页面是否是激活状态。
+兼容性：IE10+，Firefox10+,Chrome14+,Opera12.1+,Safari7.1+
+```
+let hiddenProperty = 'hidden' in document ? 'hidden' : 'webkitHidden' in document ? 'webkitHidden' : 'mozHidden' in document ? 'mozHidden' : 'hidden';
+let visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
+
+handleVisibilityChange = () => {
+    if (!document[hiddenProperty]) {
+        // 页面被激活，进行恢复处理
+    } else {
+        // 页面未激活，相应逻辑调整
+    }
+}
+
+componentDidMount() {
+    if (document.addEventListener) {
+        document.addEventListener(visibilityChangeEvent, this.handleVisibilityChange.bind(this));
+    } else {
+        document.attachEvent(visibilityChangeEvent, this.handleVisibilityChange.bind(this));
+    }
+}
+```
