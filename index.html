@@ -196,55 +196,12 @@
 <li>第一次握手：客户端给服务端发一个 SYN 报文，并指明客户端的初始化序列号 ISN。此时客户端处于 SYN_SEND 状态。</li>
 <li>第二次握手：服务器收到客户端的 SYN 报文之后，会以自己的 SYN 报文作为应答，并且也是指定了自己的初始化序列号 ISN，同时会把客户端的 ISN + 1 作为 ACK 的值，表示自己已经收到了客户端的 SYN，此时服务器处于 SYN_REVD 的状态。</li>
 <li>第三次握手：客户端收到 SYN 报文之后，会发送一个 ACK 报文，当然，也是一样把服务器的 ISN + 1 作为 ACK 的值，表示已经收到了服务端的 SYN 报文，此时客户端处于 ESTABLISED 状态。</li>
-<li>服务器收到 ACK 报文之后，也处于 ESTABLISED 状态，此时，双方以建立起了链接。</li>
-</ol>
-<blockquote>
-<p><strong>为什么要初始化序列号（通过算法来动态随机生成序号）</strong></p>
-</blockquote>
-<ul>
-<li>初始化序列号不能设置为一个固定值，因为这样容易被攻击者猜出后续序列号，从而遭到攻击。</li>
-<li>避免了数据乱序的问题。若序列号为相同的固定值则会把不同tcp连接混起来，造成数据混乱。（两次建立tcp连接都使用了相同的ip地址和端口）</li>
-</ul>
-<blockquote>
-<p><strong>为什么需要三次握手？</strong></p>
-</blockquote>
-<p>三次握手是为了确认双方的接收与发送功能是否正常。</p>
-<ul>
-<li>第一次握手：客户端向服务端发送报文，服务端收到确认客户端的发送、服务端的接收是正常的。</li>
-<li>第二次握手：服务端向客户端发送报文，客户端收到确认客户端的发送和接收、服务端的发送和接收是正常的。但此时服务端并不能确认客户端的接收和服务端的发送是否正常。</li>
-<li>第三次握手：客户端向服务端发送报文，服务端收到确认客户端的接收、服务端的发送是正常的。</li>
-</ul>
-<blockquote>
-<p><strong>三次握手的作用</strong></p>
-</blockquote>
-<ol>
-<li>初始化序列号，为后面的可靠传送做准备。</li>
-<li>确认双方的接收能力、发送能力是否正常。</li>
-<li>如果是 https 协议的话，三次握手这个过程，还会进行数字证书的验证以及加密密钥的生成。</li>
-</ol>
-<h4 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h4><blockquote>
-<p><strong>四次挥手的过程</strong></p>
-</blockquote>
-<p>刚开始双方都处于 ESTABLISED 状态。</p>
-<ol>
-<li>第一次挥手：客户端向服务端发送一个 FIN 报文，报文中会指定一个序列号ISN(c)。此时客户端处于CLOSED_WAIT1状态。</li>
-<li>第二次挥手：服务端收到 FIN 之后，会发送 ACK 报文，且把客户端的序列号值 ISN(c) + 1 作为 ACK 报文的序列号值，此时服务端处于 CLOSE_WAIT2状态。</li>
-<li>第三次挥手：如果服务端也想断开连接了，和客户端的第一次挥手一样，发送 FIN 报文，且指定一个序列号ISN(s)。此时服务端处于 LAST_ACK 的状态。</li>
-<li>第四次挥手：客户端收到 FIN 之后，一样发送一个 ACK 报文作为应答，且把服务端的序列号值 ISN(s) + 1 作为自己 ACK 报文的序列号值，此时客户端处于 TIME_WAIT 状态。需要过一阵子以确保服务端收到 ACK 报文之后才会进入 CLOSED 状态。</li>
-<li>服务端收到 ACK 报文之后，就处于关闭连接了，处于 CLOSED 状态。</li>
-</ol>
-<blockquote>
-<p><strong>为什么需要TIME_WAIT状态</strong></p>
-</blockquote>
-<ul>
-<li>要确保服务端是否已经收到了客户端的 ACK 报文，如果没有收到的话，服务端会重新发 FIN 报文给客户端，客户端再次收到 FIN 报文之后，就知道之前的 ACK 报文丢失了，会再次发送 ACK 报文。</li>
-<li>TIME_WAIT 持续的时间至少是一个报文的来回时间。如果过了这个持续时间没有再次收到 FIN 报文，则代表服务端成功接收到 ACK 报文，此时处于 CLOSED 状态。</li>
-</ul>
-
+<li>服务器收到 ACK 报文之后，也处于 ESTABLISED 状态，此时，双方以建立起了链接。
+        
       
 
       
-    </div>
+    </li></ol></div>
     <div class="article-info article-info-index">
       
       
@@ -317,16 +274,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-git-切换到分支上指定tag处的代码"><a href="#1-git-切换到分支上指定tag处的代码" class="headerlink" title="1. git 切换到分支上指定tag处的代码"></a>1. git 切换到分支上指定tag处的代码</h3><p>支持 push，pop，top，size，clear 操作，并能在常数时间内检索到最小元素的栈。</p>
-<ul>
-<li>push(x) – 将元素 x 推入栈中。</li>
-<li>pop() – 删除栈顶的元素。</li>
-<li>top() – 获取栈顶元素。</li>
-<li>size() – 获取栈深度（大小）。</li>
-<li>clear() – 清空栈元素。</li>
-<li>getMin() – 检索栈中的最小元素。</li>
+        <h3 id="1-git-切换到分支上指定tag处的代码"><a href="#1-git-切换到分支上指定tag处的代码" class="headerlink" title="1. git 切换到分支上指定tag处的代码"></a>1. git 切换到分支上指定tag处的代码</h3><ul>
+<li>git checkout &lt; tag &gt;</li>
 </ul>
-        
+
       
 
       
@@ -741,15 +692,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -757,7 +704,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -773,11 +724,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计划</a>
+                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -789,7 +740,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -797,7 +748,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
             
             <div class="clearfix"></div>

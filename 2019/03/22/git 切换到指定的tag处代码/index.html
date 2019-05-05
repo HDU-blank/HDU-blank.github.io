@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>git 切换到指定的tag处代码 | McG61的随笔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. git 切换到分支上指定tag处的代码支持 push，pop，top，size，clear 操作，并能在常数时间内检索到最小元素的栈。  push(x) – 将元素 x 推入栈中。 pop() – 删除栈顶的元素。 top() – 获取栈顶元素。 size() – 获取栈深度（大小）。 clear() – 清空栈元素。 getMin() – 检索栈中的最小元素。">
+  <meta name="description" content="1. git 切换到分支上指定tag处的代码 git checkout &amp;lt; tag &amp;gt;">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 切换到指定的tag处代码">
 <meta property="og:url" content="http://yoursite.com/2019/03/22/git 切换到指定的tag处代码/index.html">
 <meta property="og:site_name" content="McG61的随笔">
-<meta property="og:description" content="1. git 切换到分支上指定tag处的代码支持 push，pop，top，size，clear 操作，并能在常数时间内检索到最小元素的栈。  push(x) – 将元素 x 推入栈中。 pop() – 删除栈顶的元素。 top() – 获取栈顶元素。 size() – 获取栈深度（大小）。 clear() – 清空栈元素。 getMin() – 检索栈中的最小元素。">
+<meta property="og:description" content="1. git 切换到分支上指定tag处的代码 git checkout &amp;lt; tag &amp;gt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-22T05:28:39.768Z">
+<meta property="og:updated_time" content="2019-05-05T06:58:27.646Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 切换到指定的tag处代码">
-<meta name="twitter:description" content="1. git 切换到分支上指定tag处的代码支持 push，pop，top，size，clear 操作，并能在常数时间内检索到最小元素的栈。  push(x) – 将元素 x 推入栈中。 pop() – 删除栈顶的元素。 top() – 获取栈顶元素。 size() – 获取栈深度（大小）。 clear() – 清空栈元素。 getMin() – 检索栈中的最小元素。">
+<meta name="twitter:description" content="1. git 切换到分支上指定tag处的代码 git checkout &amp;lt; tag &amp;gt;">
   
     <link rel="alternative" href="/atom.xml" title="McG61的随笔" type="application/atom+xml">
   
@@ -183,30 +183,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-git-切换到分支上指定tag处的代码"><a href="#1-git-切换到分支上指定tag处的代码" class="headerlink" title="1. git 切换到分支上指定tag处的代码"></a>1. git 切换到分支上指定tag处的代码</h3><p>支持 push，pop，top，size，clear 操作，并能在常数时间内检索到最小元素的栈。</p>
-<ul>
-<li>push(x) – 将元素 x 推入栈中。</li>
-<li>pop() – 删除栈顶的元素。</li>
-<li>top() – 获取栈顶元素。</li>
-<li>size() – 获取栈深度（大小）。</li>
-<li>clear() – 清空栈元素。</li>
-<li>getMin() – 检索栈中的最小元素。</li>
+        <h3 id="1-git-切换到分支上指定tag处的代码"><a href="#1-git-切换到分支上指定tag处的代码" class="headerlink" title="1. git 切换到分支上指定tag处的代码"></a>1. git 切换到分支上指定tag处的代码</h3><ul>
+<li>git checkout &lt; tag &gt;</li>
 </ul>
-<a id="more"></a>
-<h4 id="JS代码实现"><a href="#JS代码实现" class="headerlink" title="JS代码实现"></a>JS代码实现</h4>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * initialize your data structure here.</span><br><span class="line"> */</span><br><span class="line">var LinkedList = function() &#123;</span><br><span class="line">    var Node = function (element) &#123;		// 新元素构造</span><br><span class="line">        this.element = element;</span><br><span class="line">        this.next = null; 				//指向链表中下一个节点项的指针</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @param &#123;number&#125; x</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.push = function(x) &#123;</span><br><span class="line">    this.array.push(x);</span><br><span class="line">    if (this.minArray.length === 0 || x &lt;= this.minArray[this.minArray.length-1]) &#123;</span><br><span class="line">        this.minArray.push(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.pop = function() &#123;</span><br><span class="line">    let item = this.array.pop();</span><br><span class="line">    if (item === this.minArray[this.minArray.length-1]) &#123;</span><br><span class="line">        this.minArray.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    return item;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.top = function() &#123;</span><br><span class="line">    return this.array[this.array.length - 1];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.size = function() &#123;</span><br><span class="line">    return this.array.length;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.clear = function() &#123;</span><br><span class="line">    this.array = [];</span><br><span class="line">    this.minArray = [];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.getMin = function() &#123;</span><br><span class="line">    return this.minArray[this.minArray.length-1];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Your MinStack object will be instantiated and called as such:</span><br><span class="line"> * var obj = new MinStack();</span><br><span class="line"> * obj.push(x);</span><br><span class="line"> * obj.pop();</span><br><span class="line"> * var param_3 = obj.top();</span><br><span class="line"> * var param_4 = obj.getMin();</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
-<h3 id="2-JS构建顺序栈"><a href="#2-JS构建顺序栈" class="headerlink" title="2. JS构建顺序栈"></a>2. JS构建顺序栈</h3><p>支持 push，pop，top，size，clear 操作，并能在常数时间内检索到最小元素的栈。</p>
-<ul>
-<li>push(x) – 将元素 x 推入栈中。</li>
-<li>pop() – 删除栈顶的元素。</li>
-<li>top() – 获取栈顶元素。</li>
-<li>size() – 获取栈深度（大小）。</li>
-<li>clear() – 清空栈元素。</li>
-<li>getMin() – 检索栈中的最小元素。</li>
-</ul>
-<!--more-->
-<h4 id="JS代码实现-1"><a href="#JS代码实现-1" class="headerlink" title="JS代码实现"></a>JS代码实现</h4>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * initialize your data structure here.</span><br><span class="line"> */</span><br><span class="line">var MinStack = function() &#123;</span><br><span class="line">    this.array = [];</span><br><span class="line">    this.minArray = [];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @param &#123;number&#125; x</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.push = function(x) &#123;</span><br><span class="line">    this.array.push(x);</span><br><span class="line">    if (this.minArray.length === 0 || x &lt;= this.minArray[this.minArray.length-1]) &#123;</span><br><span class="line">        this.minArray.push(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.pop = function() &#123;</span><br><span class="line">    let item = this.array.pop();</span><br><span class="line">    if (item === this.minArray[this.minArray.length-1]) &#123;</span><br><span class="line">        this.minArray.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    return item;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.top = function() &#123;</span><br><span class="line">    return this.array[this.array.length - 1];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.size = function() &#123;</span><br><span class="line">    return this.array.length;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.clear = function() &#123;</span><br><span class="line">    this.array = [];</span><br><span class="line">    this.minArray = [];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.getMin = function() &#123;</span><br><span class="line">    return this.minArray[this.minArray.length-1];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Your MinStack object will be instantiated and called as such:</span><br><span class="line"> * var obj = new MinStack();</span><br><span class="line"> * obj.push(x);</span><br><span class="line"> * obj.pop();</span><br><span class="line"> * var param_3 = obj.top();</span><br><span class="line"> * var param_4 = obj.getMin();</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
-<p>  ​</p>
-<p>  ​</p>
 
       
 
@@ -412,15 +391,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -428,7 +403,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -444,11 +423,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计划</a>
+                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -460,7 +439,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -468,7 +447,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
             
             <div class="clearfix"></div>
