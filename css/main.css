@@ -2631,3 +2631,6 @@ embed {
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
 }
+.gitalk {
+  padding: 0 40px;
+}
