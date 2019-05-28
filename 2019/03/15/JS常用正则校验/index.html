@@ -26,6 +26,10 @@
   
     <link rel="icon" href="/img/favicon.png">
   
+  
+    <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
+    <script src="/lib/gitalk/gitalk.min.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
   
@@ -299,12 +303,32 @@
 
 
   
+
   
+
   
 
   
 
   
+
+  
+  <div class="gitalk">
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    const gitalk = new Gitalk({
+      clientID: 'dfd9f66ad9fbacde7880',
+      clientSecret: 'b819ae0617b877c2c5892f212cb16f361656c906',
+      repo: 'https://hdu-blank.github.io/',
+      owner: 'McG61',
+      admin: ['McG61'],
+      id: location.pathname,      // Ensure uniqueness and length less than 50
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+  </script>
+</div>
 
   
 
@@ -417,11 +441,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -437,15 +477,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -457,15 +489,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">计划</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES7</a>
               </li>
             
             <div class="clearfix"></div>
@@ -548,6 +576,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         
         <li class="search-li">
           <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>JavaScript | MDN</a>
+        </li>
+        
+        <li class="search-li">
+          <a href="https://www.lodashjs.com/docs/4.17.5.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Lodash 中文文档</a>
         </li>
         
       </ul>
