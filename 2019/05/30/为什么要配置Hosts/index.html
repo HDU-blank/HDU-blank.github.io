@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: npm | McG61的随笔</title>
+  <title>为什么要配置Hosts | McG61的随笔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="McG61的随笔">
-<meta property="og:url" content="http://yoursite.com/tags/npm/index.html">
+  <meta name="description" content="Hosts在Windows中的工作原理 根据 Windows系统规定，在进行DNS请求以前，Windows系统会先检查自己的Hosts文件中是否有这个地址映射关系，如果有则调用这个IP地址映射，如果没有再向已知的DNS 服务器提出域名解析。也就是说Hosts的请求级别比DNS高。  配置Hosts文件的作用 加快域名解析  对于要经常访问的网站，我们可以通过在Hosts中配置域名和IP的映射关系，">
+<meta name="keywords" content="host">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么要配置Hosts">
+<meta property="og:url" content="http://yoursite.com/2019/05/30/为什么要配置Hosts/index.html">
 <meta property="og:site_name" content="McG61的随笔">
+<meta property="og:description" content="Hosts在Windows中的工作原理 根据 Windows系统规定，在进行DNS请求以前，Windows系统会先检查自己的Hosts文件中是否有这个地址映射关系，如果有则调用这个IP地址映射，如果没有再向已知的DNS 服务器提出域名解析。也就是说Hosts的请求级别比DNS高。  配置Hosts文件的作用 加快域名解析  对于要经常访问的网站，我们可以通过在Hosts中配置域名和IP的映射关系，">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-30T02:33:04.260Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="McG61的随笔">
+<meta name="twitter:title" content="为什么要配置Hosts">
+<meta name="twitter:description" content="Hosts在Windows中的工作原理 根据 Windows系统规定，在进行DNS请求以前，Windows系统会先检查自己的Hosts文件中是否有这个地址映射关系，如果有则调用这个IP地址映射，如果没有再向已知的DNS 服务器提出域名解析。也就是说Hosts的请求级别比DNS高。  配置Hosts文件的作用 加快域名解析  对于要经常访问的网站，我们可以通过在Hosts中配置域名和IP的映射关系，">
   
     <link rel="alternative" href="/atom.xml" title="McG61的随笔" type="application/atom+xml">
   
@@ -163,68 +168,154 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-为什么要配置Hosts" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/18/npm、nvm和nrm使用/" class="archive-article-date">
-  	<time datetime="2019-03-18T04:56:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/18/npm、nvm和nrm使用/">npm、nvm和nrm使用</a>
+    <h1 class="article-title" itemprop="name">
+      为什么要配置Hosts
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/05/30/为什么要配置Hosts/" class="archive-article-date">
+  	<time datetime="2019-05-30T02:01:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="Hosts在Windows中的工作原理"><a href="#Hosts在Windows中的工作原理" class="headerlink" title="Hosts在Windows中的工作原理"></a>Hosts在Windows中的工作原理</h5><blockquote>
+<p>根据 Windows系统规定，在进行DNS请求以前，Windows系统会先检查自己的Hosts文件中是否有这个地址映射关系，如果有则调用这个IP地址映射，如果没有再向已知的DNS 服务器提出域名解析。也就是说<strong>Hosts的请求级别比DNS高</strong>。</p>
+</blockquote>
+<h5 id="配置Hosts文件的作用"><a href="#配置Hosts文件的作用" class="headerlink" title="配置Hosts文件的作用"></a>配置Hosts文件的作用</h5><ul>
+<li><strong>加快域名解析</strong><br>  对于要经常访问的网站，我们可以通过在Hosts中配置域名和IP的映射关系，这样当我们输入域名计算机就能很快解析出IP，而不用请求网络上的DNS服务器。</li>
+<li><strong>方便局域网用户</strong><br>  在多数局域网中，会有服务器提供给内网用户使用。但由于局域网中一般很少架设DNS服务器，访问这些服务必须要输入难记的IP地址，对不少人来说相当麻烦。<br>  现在可以分别给这些服务器取个容易记住的名字，然后在Hosts中建立IP映射，这样以后访问的时候我们输入这个服务器的名字就行了。</li>
+<li><p><strong>屏蔽网站</strong><br>  对于某些恶意网站我们可以利用Hosts把该网站的域名映射到自己计算机的IP或错误的IP，这样就不会访问到了。具体可以在Hosts文件中配置如下：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 #屏蔽的网站</span><br><span class="line">0.0.0.0   #屏蔽的网站</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>顺利连接系统</strong><br>  对于Lotus的服务器和一些数据库服务器，在访问时如果直接输入IP地址那是不能访问的，只能输入服务器名才能访问。那么我们配置好Hosts文件，这样输入服务器名就能顺利连接了。</p>
+</li>
+<li><strong>虚拟域名</strong><br>  很多时候，网站建设者需要把”软环境“搭建好，再进行上传调试。但类似于邮件服务，则需要使用域名来辅助调试， 这时就可以将本地 IP 地址与一个”虚拟域名“做地址指向，就可以达到要求的效果，且无需花费。</li>
+</ul>
+<p><strong>注意：</strong> Hosts文件配置的映射是静态的，如果网络上的计算机更改了IP地址，就需要更新Hosts文件，否则将不能访问。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>这彩蛋彩蛋，扫码有惊喜<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">npm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nvm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nrm</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">host</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/05/04/三次握手与四次挥手/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">三次握手与四次挥手</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="gitalk">
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    const gitalk = new Gitalk({
+      clientID: 'dfd9f66ad9fbacde7880',
+      clientSecret: 'b819ae0617b877c2c5892f212cb16f361656c906',
+      repo: 'hdu-blank.github.io',
+      owner: 'HDU-blank',
+      admin: ['HDU-blank'],
+      id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+  </script>
+</div>
+
+  
 
 
           </div>
@@ -248,9 +339,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,
